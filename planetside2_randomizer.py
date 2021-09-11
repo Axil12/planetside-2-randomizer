@@ -159,6 +159,9 @@ def draw_rocket_launcher(faction):
     drawn_rocket_launcher = random.choice(possible_weapons)
     return drawn_rocket_launcher
 
+def draw_rocklet_type():
+    possibilities = ["ACE Rocklet", "Sabot Rocklet", "Typhoon Rocklet"]
+    return {"name": random.choice(possibilities)}
 
 def draw_implant(class_):
     drawn_implant = random.choice(IMPLANTS)
@@ -271,10 +274,14 @@ def draw_loadout():
     drawn_tertiary_weapon = None
     if drawn_class == "heavy_assault":
         drawn_tertiary_weapon = draw_rocket_launcher(CONFIG["faction"])
+    elif drawn_class == "light_assault":
+        drawn_tertiary_weapon = draw_rocklet_type()
 
     draw_implant_1, draw_implant_2 = draw_implant(drawn_class), draw_implant(
         drawn_class
     )
+    while draw_implant_2 == draw_implant_1:
+        draw_implant_2 = draw_implant(drawn_class)
 
     drawn_grenade = draw_grenade(drawn_class)
     drawn_knife = draw_knife(drawn_class)
