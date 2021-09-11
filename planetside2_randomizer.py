@@ -1,6 +1,7 @@
 import json
 import random
 import tkinter as tk
+import os
 
 CONFIG = {
     "faction": None,
@@ -11,7 +12,8 @@ CONFIG = {
     "ability": None,
     "grenade": None,
     "knife": None,
-    "tactical_slot": None
+    "tactical_slot": None,
+    "app_font": "Helvetica 9"
     }
 
 FACTION_ID = {"vs": "1", "tr": "3", "nc": "2"}
@@ -318,6 +320,8 @@ def main():
     window.minsize(300, 0)
     window.maxsize(300, 0)
     window.title("Loadout Randomizer")
+    if os.path.isfile("EDIM_logo.ico"):
+        window.iconbitmap("EDIM_logo.ico")
 
     Frame_top = tk.Frame(window, borderwidth=10)
     Frame_top.pack(side=tk.TOP)
@@ -328,7 +332,7 @@ def main():
     Frame_2 = tk.Frame(window, borderwidth=10)
     Frame_2.pack(side=tk.BOTTOM)
 
-    font = 'Helvetica 9'
+    font = CONFIG["app_font"]
     class_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Class : ")
     primary_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="1st Weapon : ")
     secondary_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="2nd Weapon : ")
@@ -371,14 +375,23 @@ def main():
         tactical_slot_label["text"] = f'{DRAWN_LOADOUT["tactical_slot"]}'
 
 
-    draw_button = tk.Button(
-        Frame_2,
-        height=2,
-        width=15,
-        text="Draw loadout",
-        font=font+" bold",
-        background="gray",
-        command=display_draw
+    if os.path.isfile("button_img.png"):
+        button_img = tk.PhotoImage(file="button_img.png").subsample(2, 2)
+        draw_button = tk.Button(
+            Frame_2,
+            command=display_draw,
+            image=button_img,
+            borderwidth=0
+        )
+    else:
+        draw_button = tk.Button(
+            Frame_2,
+            height=2,
+            width=15,
+            text="Draw loadout",
+            font=font+" bold",
+            background="gray",
+            command=display_draw,
         )
 
     class_indic.pack(anchor="w")

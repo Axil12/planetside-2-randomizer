@@ -7,5 +7,6 @@
   "ability": true,
   "grenade": true,
   "knife": true,
-  "tactical_slot": true
+  "tactical_slot": true,
+  "app_font": "Helvetica 9"
 }
