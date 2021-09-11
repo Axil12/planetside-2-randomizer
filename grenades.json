@@ -1,0 +1,142 @@
+[
+    {
+        "item_id": "880",
+        "name": "Sticky Grenade",
+        "faction": "2",
+        "item_category_id": "17",
+        "class_restriction": ["engineer"]
+    },
+    {
+        "item_id": "881",
+        "name": "Sticky Grenade",
+        "faction": "3",
+        "item_category_id": "17",
+        "class_restriction": ["engineer"]
+    },
+    {
+        "item_id": "882",
+        "name": "Sticky Grenade",
+        "faction": "1",
+        "item_category_id": "17",
+        "class_restriction": ["engineer"]
+    },
+    {
+        "item_id": "883",
+        "name": "Nanite Healing Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["combat_medic"]
+    },
+    {
+        "item_id": "884",
+        "name": "Nanite Revive Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["combat_medic"]
+    },
+    {
+        "item_id": "1095",
+        "name": "Anti-Vehicle Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["heavy_assault"]
+    },
+    {
+        "item_id": "1096",
+        "name": "Concussion Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["heavy_assault"]
+    },
+    {
+        "item_id": "6050",
+        "name": "Decoy Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["infiltrator"]
+    },
+    {
+        "item_id": "7755",
+        "name": "Flash Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["light_assault", "infiltrator", "heavy_assault"]
+    },
+    {
+        "item_id": "44505",
+        "name": "Frag Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": null
+    },
+    {
+        "item_id": "44605",
+        "name": "Frag Grenade",
+        "faction": "3",
+        "item_category_id": "17",
+        "class_restriction": null
+    },
+    {
+        "item_id": "44705",
+        "name": "Plasma Grenade",
+        "faction": "1",
+        "item_category_id": "17",
+        "class_restriction": null
+    },
+    {
+        "item_id": "50051",
+        "name": "EMP Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["infiltrator"]
+    },
+    {
+        "item_id": "6002453",
+        "name": "Quick-Det Flash Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["light_assault"]
+    },
+    {
+        "item_id": "6003418",
+        "name": "NSX Fujin",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": null
+    },
+    {
+        "item_id": "6003738",
+        "name": "Nano-Repair Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["engineer"]
+    },
+    {
+        "item_id": "6005182",
+        "name": "Frag Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": null
+    },
+    {
+        "item_id": "6005304",
+        "name": "Smoke Grenade",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": ["light_assault"]
+    },
+    {
+        "item_id": "6005328",
+        "name": "Sticky Grenade",
+        "faction": "4",
+        "item_category_id": "17",
+        "class_restriction": ["engineer"]
+    },
+    {
+        "item_id": "6005472",
+        "name": "NSX Raijin",
+        "faction": "0",
+        "item_category_id": "17",
+        "class_restriction": null
+    }
+]

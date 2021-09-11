@@ -1,0 +1,11 @@
+{
+  "faction": "vs",
+  "include_max": true,
+  "implants": true,
+  "suit_slot": true,
+  "utility_slot": true,
+  "ability": true,
+  "grenade": true,
+  "knife": true,
+  "tactical_slot": true
+}
