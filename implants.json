@@ -1,5 +1,4 @@
 [
-    {"item_id": "49997", "name": "Hold Breath", "class_restriction": null},
     {"item_id": "800616", "name": "Counter-Intelligence", "class_restriction": null},
     {"item_id": "800617", "name": "Rangefinder", "class_restriction": null},
     {"item_id": "6002591", "name": "Assimilate", "class_restriction": null},
@@ -27,7 +26,7 @@
     {"item_id": "6004456", "name": "Gunslinger", "class_restriction": null},
     {"item_id": "6004461", "name": "Salvage", "class_restriction": "max"},
     {"item_id": "6004472", "name": "Electrotech", "class_restriction": "engineer"},
-    {"item_id": "6004477", "name": "Paratrooper", "class_restriction": null},
+    {"item_id": "6004477", "name": "Paratrooper", "class_restriction": "light_assault"},
     {"item_id": "6004485", "name": "Mending Field", "class_restriction": "combat_medic"},
     {"item_id": "6004490", "name": "Mobility Mesh", "class_restriction": "heavy_assault"},
     {"item_id": "6004524", "name": "Symbiote", "class_restriction": null},
