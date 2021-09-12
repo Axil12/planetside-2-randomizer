@@ -131,7 +131,7 @@ def draw_primary(class_id, faction):
     for key in WEAPONS.keys():
         if not int(WEAPONS[key]["item_category_id"]) in possible_primary_categories:
             continue
-        if WEAPONS[key]["faction_id"] != FACTION_ID[faction]:
+        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0"]:
             continue
         possible_weapons.append(WEAPONS[key])
     drawn_primary_weapon = random.choice(possible_weapons)
@@ -143,7 +143,7 @@ def draw_secondary(class_id, faction):
     for key in WEAPONS.keys():
         if not WEAPONS[key]["item_category_id"] in SIDEARM_CATEGORY_ID:
             continue
-        if WEAPONS[key]["faction_id"] != FACTION_ID[faction]:
+        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0"]:
             continue
         possible_weapons.append(WEAPONS[key])
     drawn_secondary_weapon = random.choice(possible_weapons)
@@ -155,7 +155,7 @@ def draw_rocket_launcher(faction):
     for key in WEAPONS.keys():
         if WEAPONS[key]["item_category_id"] != "13":
             continue
-        if WEAPONS[key]["faction_id"] != FACTION_ID[faction]:
+        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0"]:
             continue
         possible_weapons.append(WEAPONS[key])
     drawn_rocket_launcher = random.choice(possible_weapons)
