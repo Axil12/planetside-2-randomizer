@@ -3,10 +3,10 @@
   "include_max": false,
   "implants": true,
   "suit_slot": true,
-  "utility_slot": false,
+  "utility_slot": true,
   "ability": true,
   "grenade": false,
   "knife": false,
   "tactical_slot": false,
-  "app_font": "Calibri 10"
+  "app_font": "Calibri 11 bold"
 }
