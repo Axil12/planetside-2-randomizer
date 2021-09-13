@@ -16,7 +16,7 @@ CONFIG = {
     "app_font": "Helvetica 9"
     }
 
-FACTION_ID = {"vs": "1", "tr": "3", "nc": "2"}
+FACTION_ID = {"vs": "1", "tr": "3", "nc": "2", "nso": None}
 CLASS_TO_LOADOUT_ID = {
     "infiltrator": None,
     "light_assault": None,
@@ -85,9 +85,9 @@ def load_config():
         GRENADES = json.load(f)
 
     faction = CONFIG["faction"]
-    if faction not in ["nc", "tr", "vs"]:
+    if faction not in ["nc", "tr", "vs", "nso"]:
         raise ValueError(
-            'Wrong faction in the config file! Choose from ["nc", "tr", "vs"].'
+            'Wrong faction in the config file! Choose from ["nc", "tr", "vs", "nso"].'
         )
     if faction == "nc":
         CLASS_TO_LOADOUT_ID["infiltrator"] = "1"
