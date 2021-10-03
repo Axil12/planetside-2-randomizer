@@ -66,6 +66,8 @@ GRENADES = []
 
 DRAWN_LOADOUT = {}
 
+last_played_class = None
+
 def load_config():
     with open("config.json") as f:
         config = json.load(f)
@@ -180,8 +182,8 @@ def draw_grenade(class_):
     drawn = random.choice(GRENADES)
     while (
         drawn["class_restriction"] is not None
-        and class_.lower() not in drawn["class_restriction"]
-        and drawn["faction"] not in ["0", CONFIG["faction"]]
+        and (class_.lower() not in drawn["class_restriction"]
+        or drawn["faction"] not in ["0", CONFIG["faction"]])
     ):
         drawn = random.choice(GRENADES)
     return drawn
@@ -195,7 +197,6 @@ def draw_suit_slot(class_):
     if class_.lower() == "max":
         return random.choice(["Kinetic Armor", "Ordnance Armor"])
     possibilities = [
-        "Adrenaline Pump",
         "Advanced Shield Capacitor",
         "Ammunition Belt",
         "Flak Armor",
@@ -203,13 +204,13 @@ def draw_suit_slot(class_):
         "Nanoweave Armor",
     ]
     if class_.lower() == "infiltrator":
-        possibilities = possibilities + ["Chameleon Module"]
+        possibilities = possibilities + ["Chameleon Module", "Adrenaline Pump"]
     elif class_.lower() == "light_assault":
-        possibilities = possibilities + ["Munitions Pouch", "Flight Suit"]
+        possibilities = possibilities + ["Munitions Pouch", "Flight Suit", "Adrenaline Pump"]
     elif class_.lower() == "heavy_assault":
         possibilities = possibilities + ["Munitions Pouch"]
     elif class_.lower() == "combat_medic":
-        possibilities = possibilities + ["Nano-Regen Capacitor"]
+        possibilities = possibilities + ["Nano-Regen Capacitor", "Adrenaline Pump"]
     elif class_.lower() == "engineer":
         possibilities = possibilities + ["Demolitions Pouch", "Mine Carrier", "Utility Pouch"]
     return random.choice(possibilities)
@@ -254,7 +255,7 @@ def draw_ability(class_):
     elif class_.lower() == "heavy_assault":
         possibilities = ["Adrenaline Shield", "Nanite Mesh Generator", "Resist Shield"]
     elif class_.lower() == "combat_medic":
-        possibilities = ["Nano-Regen Device"]
+        possibilities = ["Nano-Regen Device", "Shield Recharging Field"]
     elif class_.lower() == "engineer":
         possibilities = ["Anti-Infantry MANA Turret", "Anti-Vehicle MANA Turret"]
     elif class_.lower() == "max":
@@ -263,7 +264,12 @@ def draw_ability(class_):
 
 
 def draw_loadout():
+    global last_played_class
     drawn_class = random.choice(list(CLASS_TO_LOADOUT_ID.keys()))
+    while drawn_class == last_played_class:
+        drawn_class = random.choice(list(CLASS_TO_LOADOUT_ID.keys()))
+    last_played_class = drawn_class
+    
     drawn_class_id = CLASS_TO_LOADOUT_ID[drawn_class]
 
     drawn_primary_weapon = draw_primary(drawn_class_id, CONFIG["faction"])
@@ -364,7 +370,7 @@ def main():
         class_label["text"] = f'{DRAWN_LOADOUT["class"].capitalize().replace("_", " ")}'
         primary_label["text"] = f'{DRAWN_LOADOUT["primary"]["name"]}'
         secondary_label["text"] = f'{DRAWN_LOADOUT["secondary"]["name"]}'
-        tertiary_label["text"] = f'{None}' if DRAWN_LOADOUT["tertiary"] is None else DRAWN_LOADOUT["tertiary"]["name"]
+        tertiary_label["text"] = f' ' if DRAWN_LOADOUT["tertiary"] is None else DRAWN_LOADOUT["tertiary"]["name"]
         ability_label["text"] = f'{DRAWN_LOADOUT["ability"]}'
         implant_1_label["text"] = f'{DRAWN_LOADOUT["implant_1"]["name"]}'
         implant_2_label["text"] = f'{DRAWN_LOADOUT["implant_2"]["name"]}'

@@ -60,7 +60,7 @@
         "name": "Flash Grenade",
         "faction": "0",
         "item_category_id": "17",
-        "class_restriction": ["light_assault", "infiltrator", "heavy_assault"]
+        "class_restriction": ["light_assault"]
     },
     {
         "item_id": "44505",
