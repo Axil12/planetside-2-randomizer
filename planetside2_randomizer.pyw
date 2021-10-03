@@ -199,13 +199,13 @@ def draw_implant(class_):
     return drawn_implant
 
 
-def draw_grenade(class_):
+def draw_grenade(class_, faction):
     if class_.lower() == "max":
         return None
     drawn = random.choice(GRENADES)
     while drawn["class_restriction"] is not None and (
         class_.lower() not in drawn["class_restriction"]
-        or drawn["faction"] not in ["0", FACTION_ID[CONFIG["faction"]]]
+        or drawn["faction"] not in ["0", FACTION_ID[faction]]
     ):
         drawn = random.choice(GRENADES)
     return drawn
@@ -249,17 +249,17 @@ def draw_utlity_slot(class_):
     return drawn
 
 
-def draw_tactical_slot(class_):
+def draw_tactical_slot(class_, faction):
     if class_.lower() == "max":
         return None
     return random.choice(TACTICALS)
 
 
-def draw_ability(class_):
+def draw_ability(class_, faction):
     drawn = random.choice(ABILITIES)
     while drawn["class_restriction"] is not None and (
         class_.lower() not in drawn["class_restriction"]
-        or drawn["faction"] not in ["0", FACTION_ID[CONFIG["faction"]]]
+        or drawn["faction"] not in ["0", FACTION_ID[faction]]
     ):
         drawn = random.choice(ABILITIES)
     return drawn
@@ -293,12 +293,12 @@ def draw_loadout():
     while draw_implant_2 == draw_implant_1:
         draw_implant_2 = draw_implant(drawn_class)
 
-    drawn_grenade = draw_grenade(drawn_class)
+    drawn_grenade = draw_grenade(drawn_class, CONFIG["faction"])
     drawn_knife = draw_knife(drawn_class)
     drawn_suit_slot = draw_suit_slot(drawn_class)
     drawn_utility_slot = draw_utlity_slot(drawn_class)
-    drawn_tactical_slot = draw_tactical_slot(drawn_class)
-    drawn_ability = draw_ability(drawn_class)
+    drawn_tactical_slot = draw_tactical_slot(drawn_class, CONFIG["faction"])
+    drawn_ability = draw_ability(drawn_class, CONFIG["faction"])
 
     drawn_loadout = {
         "class": drawn_class,
