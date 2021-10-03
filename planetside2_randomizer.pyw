@@ -67,8 +67,6 @@ SUITS = []
 UTILITIES = []
 TACTICALS = []
 
-DRAWN_LOADOUT = {}
-
 last_played_class = None
 
 
@@ -153,7 +151,7 @@ def draw_primary(class_id, faction):
     for key in WEAPONS.keys():
         if not int(WEAPONS[key]["item_category_id"]) in possible_primary_categories:
             continue
-        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0"]:
+        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0", None]:
             continue
         possible_weapons.append(WEAPONS[key])
     drawn_primary_weapon = random.choice(possible_weapons)
@@ -165,7 +163,7 @@ def draw_secondary(class_id, faction):
     for key in WEAPONS.keys():
         if not WEAPONS[key]["item_category_id"] in SIDEARM_CATEGORY_ID:
             continue
-        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0"]:
+        if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0", None]:
             continue
         possible_weapons.append(WEAPONS[key])
     drawn_secondary_weapon = random.choice(possible_weapons)
@@ -315,9 +313,6 @@ def draw_loadout():
         "ability": drawn_ability,
     }
 
-    global DRAWN_LOADOUT
-    DRAWN_LOADOUT = drawn_loadout
-
     return drawn_loadout
 
 
@@ -392,36 +387,36 @@ def main():
     tactical_slot_label = tk.Label(Frame_1, font=font, justify=tk.RIGHT)
 
     def display_draw():
-        draw_loadout()
-        class_label["text"] = f'{DRAWN_LOADOUT["class"].capitalize().replace("_", " ")}'
-        primary_label["text"] = f'{DRAWN_LOADOUT["primary"]["name"]}'
-        secondary_label["text"] = f'{DRAWN_LOADOUT["secondary"]["name"]}'
+        drawn_loadout = draw_loadout()
+        class_label["text"] = f'{drawn_loadout["class"].capitalize().replace("_", " ")}'
+        primary_label["text"] = f'{drawn_loadout["primary"]["name"]}'
+        secondary_label["text"] = f'{drawn_loadout["secondary"]["name"]}'
         tertiary_label["text"] = (
             f" "
-            if DRAWN_LOADOUT["tertiary"] is None
-            else DRAWN_LOADOUT["tertiary"]["name"]
+            if drawn_loadout["tertiary"] is None
+            else drawn_loadout["tertiary"]["name"]
         )
-        ability_label["text"] = f'{DRAWN_LOADOUT["ability"]["name"]}'
-        implant_1_label["text"] = f'{DRAWN_LOADOUT["implant_1"]["name"]}'
-        implant_2_label["text"] = f'{DRAWN_LOADOUT["implant_2"]["name"]}'
+        ability_label["text"] = f'{drawn_loadout["ability"]["name"]}'
+        implant_1_label["text"] = f'{drawn_loadout["implant_1"]["name"]}'
+        implant_2_label["text"] = f'{drawn_loadout["implant_2"]["name"]}'
         grenade_label["text"] = (
             ""
-            if DRAWN_LOADOUT["grenade"] is None
-            else f'{DRAWN_LOADOUT["grenade"]["name"]}'
+            if drawn_loadout["grenade"] is None
+            else f'{drawn_loadout["grenade"]["name"]}'
         )
         knife_label["text"] = (
-            " " if DRAWN_LOADOUT["knife"] is None else f'{DRAWN_LOADOUT["knife"]}'
+            " " if drawn_loadout["knife"] is None else f'{drawn_loadout["knife"]}'
         )
-        suit_slot_label["text"] = f'{DRAWN_LOADOUT["suit_slot"]["name"]}'
+        suit_slot_label["text"] = f'{drawn_loadout["suit_slot"]["name"]}'
         utility_slot_label["text"] = (
             " "
-            if DRAWN_LOADOUT["utility_slot"] is None
-            else f'{DRAWN_LOADOUT["utility_slot"]["name"]}'
+            if drawn_loadout["utility_slot"] is None
+            else f'{drawn_loadout["utility_slot"]["name"]}'
         )
         tactical_slot_label["text"] = (
             ""
-            if DRAWN_LOADOUT["tactical_slot"] is None
-            else f'{DRAWN_LOADOUT["tactical_slot"]}'
+            if drawn_loadout["tactical_slot"] is None
+            else f'{drawn_loadout["tactical_slot"]}'
         )
 
     if os.path.isfile("button_img.png"):
