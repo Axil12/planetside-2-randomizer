@@ -16,7 +16,7 @@ CONFIG = {
     "app_font": "Helvetica 9",
 }
 
-FACTION_ID = {"vs": "1", "tr": "3", "nc": "2", "nso": None}
+FACTION_ID = {"vs": "1", "tr": "3", "nc": "2", "nso": "4"}
 CLASS_TO_LOADOUT_ID = {
     "infiltrator": None,
     "light_assault": None,
@@ -135,7 +135,8 @@ def load_config():
         del CLASS_TO_LOADOUT_ID["max"]
 
 
-def draw_primary(class_id, faction):
+def draw_primary(class_, faction):
+    class_id = CLASS_TO_LOADOUT_ID[class_]
     possible_weapon_categories = LOADOUT_ALLOWED_WEAPONS[class_id]
     not_primaries_list = (
         SIDEARM_CATEGORY_ID
@@ -149,6 +150,12 @@ def draw_primary(class_id, faction):
     ]
     possible_weapons = []
     for key in WEAPONS.keys():
+        if "archer" in WEAPONS[key]["name"].lower():
+            if class_.lower() == "engineer":
+                possible_weapons.append(WEAPONS[key])
+                continue
+            else:
+                continue
         if not int(WEAPONS[key]["item_category_id"]) in possible_primary_categories:
             continue
         if WEAPONS[key]["faction_id"] not in [FACTION_ID[faction], "0", None]:
@@ -158,7 +165,8 @@ def draw_primary(class_id, faction):
     return drawn_primary_weapon
 
 
-def draw_secondary(class_id, faction):
+def draw_secondary(class_, faction):
+    class_id = CLASS_TO_LOADOUT_ID[class_]
     possible_weapons = []
     for key in WEAPONS.keys():
         if not WEAPONS[key]["item_category_id"] in SIDEARM_CATEGORY_ID:
@@ -272,12 +280,12 @@ def draw_loadout():
 
     drawn_class_id = CLASS_TO_LOADOUT_ID[drawn_class]
 
-    drawn_primary_weapon = draw_primary(drawn_class_id, CONFIG["faction"])
+    drawn_primary_weapon = draw_primary(drawn_class, CONFIG["faction"])
 
     if drawn_class == "max":
-        drawn_secondary_weapon = draw_primary(drawn_class_id, CONFIG["faction"])
+        drawn_secondary_weapon = draw_primary(drawn_class, CONFIG["faction"])
     else:
-        drawn_secondary_weapon = draw_secondary(drawn_class_id, CONFIG["faction"])
+        drawn_secondary_weapon = draw_secondary(drawn_class, CONFIG["faction"])
 
     drawn_tertiary_weapon = None
     if drawn_class == "heavy_assault":

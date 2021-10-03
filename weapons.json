@@ -124,21 +124,6 @@
       "item_category_id":"4",
       "faction_id":"1"
    },
-   "266":{
-      "name":"Phoenix AE",
-      "item_category_id":"13",
-      "faction_id":"2"
-   },
-   "267":{
-      "name":"Striker AE",
-      "item_category_id":"13",
-      "faction_id":"3"
-   },
-   "268":{
-      "name":"Lancer AE",
-      "item_category_id":"13",
-      "faction_id":"1"
-   },
    "271":{
       "name":"Carver",
       "item_category_id":"2",
@@ -371,16 +356,6 @@
    },
    "2308":{
       "name":"Hunter QCX",
-      "item_category_id":"24",
-      "faction_id":null
-   },
-   "2309":{
-      "name":"Heartstring",
-      "item_category_id":"24",
-      "faction_id":null
-   },
-   "2310":{
-      "name":"Blackheart",
       "item_category_id":"24",
       "faction_id":null
    },
@@ -1494,16 +1469,6 @@
       "item_category_id":"2",
       "faction_id":"1"
    },
-   "802319":{
-      "name":"NS-15M AE",
-      "item_category_id":"6",
-      "faction_id":null
-   },
-   "802322":{
-      "name":"NS Baron G5AE",
-      "item_category_id":"4",
-      "faction_id":null
-   },
    "802584":{
       "name":"Icikill",
       "item_category_id":"2",
@@ -1583,36 +1548,6 @@
       "name":"NS-15 Gallows",
       "item_category_id":"6",
       "faction_id":null
-   },
-   "803732":{
-      "name":"Lasher X2 AE",
-      "item_category_id":"14",
-      "faction_id":"1"
-   },
-   "803756":{
-      "name":"NC05 Jackhammer AE",
-      "item_category_id":"14",
-      "faction_id":"2"
-   },
-   "803779":{
-      "name":"T7 Mini-Chaingun AE",
-      "item_category_id":"14",
-      "faction_id":"3"
-   },
-   "803824":{
-      "name":"NS-44 Commissioner AE",
-      "item_category_id":"3",
-      "faction_id":"1"
-   },
-   "803825":{
-      "name":"NS-44 Commissioner AE",
-      "item_category_id":"3",
-      "faction_id":"3"
-   },
-   "803826":{
-      "name":"NS-44 Commissioner AE",
-      "item_category_id":"3",
-      "faction_id":"2"
    },
    "804113":{
       "name":"NS-TMC-01 \"His Regards\"",
@@ -1834,81 +1769,6 @@
       "item_category_id":"17",
       "faction_id":"0"
    },
-   "6002637":{
-      "name":"NS-R3 \"Ravenous\" Swarm",
-      "item_category_id":"13",
-      "faction_id":"0"
-   },
-   "6002640":{
-      "name":"NS-61 \"Ravenous\" Emissary",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "6002661":{
-      "name":"NS-44L \"Ravenous\" Blackhand",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "6002732":{
-      "name":"Parallax VX3-AE",
-      "item_category_id":"11",
-      "faction_id":"1"
-   },
-   "6002745":{
-      "name":"RAMS-AE .50M",
-      "item_category_id":"11",
-      "faction_id":"3"
-   },
-   "6002758":{
-      "name":"EM4-AE Longshot",
-      "item_category_id":"11",
-      "faction_id":"2"
-   },
-   "6002772":{
-      "name":"Eridani SX5-AE",
-      "item_category_id":"5",
-      "faction_id":"1"
-   },
-   "6002800":{
-      "name":"SMG-46AE Armistice",
-      "item_category_id":"5",
-      "faction_id":"3"
-   },
-   "6002824":{
-      "name":"AF-4AE Cyclone",
-      "item_category_id":"5",
-      "faction_id":"2"
-   },
-   "6002852":{
-      "name":"H-V45 AE",
-      "item_category_id":"7",
-      "faction_id":"1"
-   },
-   "6002874":{
-      "name":"TAR-AE",
-      "item_category_id":"7",
-      "faction_id":"3"
-   },
-   "6002896":{
-      "name":"GR-22AE",
-      "item_category_id":"7",
-      "faction_id":"2"
-   },
-   "6002918":{
-      "name":"NS-AM7 VS/AE Archer",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "6002930":{
-      "name":"NS-AM7 AE/TR Archer",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "6002943":{
-      "name":"NS-AM7 AE/NC Archer",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
    "6003059":{
       "name":"MKV-P Suppressed",
       "item_category_id":"5",
@@ -1919,53 +1779,8 @@
       "item_category_id":"17",
       "faction_id":"0"
    },
-   "6003571":{
-      "name":"NS-11A \"Heatwave\"",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "6003599":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"21",
-      "faction_id":"3"
-   },
-   "6003600":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"9",
-      "faction_id":"3"
-   },
-   "6003601":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"9",
-      "faction_id":"1"
-   },
-   "6003602":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"21",
-      "faction_id":"1"
-   },
-   "6003603":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"9",
-      "faction_id":"2"
-   },
-   "6003604":{
-      "name":"NS-20 \"Heatwave\" Gorgon",
-      "item_category_id":"21",
-      "faction_id":"2"
-   },
-   "6003611":{
-      "name":"NS \"Heatwave\" Decimator",
-      "item_category_id":"13",
-      "faction_id":"0"
-   },
    "6003665":{
       "name":"NS-45 Pilot",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "6003704":{
-      "name":"NS-45 \"Brass\" Pilot",
       "item_category_id":"3",
       "faction_id":null
    },
@@ -2003,36 +1818,6 @@
       "name":"NS-357 IA",
       "item_category_id":"3",
       "faction_id":null
-   },
-   "6003947":{
-      "name":"AF-4A Bandit AE",
-      "item_category_id":"8",
-      "faction_id":"2"
-   },
-   "6003967":{
-      "name":"Zenith VX-5AE",
-      "item_category_id":"8",
-      "faction_id":"1"
-   },
-   "6003968":{
-      "name":"LC2 Lynx AE",
-      "item_category_id":"8",
-      "faction_id":"3"
-   },
-   "6004008":{
-      "name":"AF-18 Stalker AE",
-      "item_category_id":"12",
-      "faction_id":"2"
-   },
-   "6004009":{
-      "name":"SOAS-20 AE",
-      "item_category_id":"12",
-      "faction_id":"3"
-   },
-   "6004010":{
-      "name":"Artemis VX26 AE",
-      "item_category_id":"12",
-      "faction_id":"1"
    },
    "6004118":{
       "name":"VE-H Maw",
@@ -2088,21 +1873,6 @@
       "name":"MGR-L1 Promise",
       "item_category_id":"6",
       "faction_id":"2"
-   },
-   "6004294":{
-      "name":"AM7-XOXO",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "6004407":{
-      "name":"NS \"Jackpot\" Decimator",
-      "item_category_id":"13",
-      "faction_id":"0"
-   },
-   "6004413":{
-      "name":"NS-61 \"Ivory\" Emissary",
-      "item_category_id":"3",
-      "faction_id":null
    },
    "6004570":{
       "name":"PS1-AV Suppressor",
@@ -2184,41 +1954,6 @@
       "item_category_id":"17",
       "faction_id":"4"
    },
-   "6005330":{
-      "name":"MGR-L1 Promise AE",
-      "item_category_id":"6",
-      "faction_id":"2"
-   },
-   "6005331":{
-      "name":"MG-H1 Watchman AE",
-      "item_category_id":"6",
-      "faction_id":"3"
-   },
-   "6005332":{
-      "name":"VE-H Maw AE",
-      "item_category_id":"6",
-      "faction_id":"1"
-   },
-   "6005422":{
-      "name":"Proximity Mine",
-      "item_category_id":"18",
-      "faction_id":"4"
-   },
-   "6005451":{
-      "name":"Lumine Edge AE",
-      "item_category_id":"2",
-      "faction_id":"1"
-   },
-   "6005452":{
-      "name":"Ripper AE",
-      "item_category_id":"2",
-      "faction_id":"3"
-   },
-   "6005453":{
-      "name":"Carver AE",
-      "item_category_id":"2",
-      "faction_id":"2"
-   },
    "6005472":{
       "name":"NSX Raijin",
       "item_category_id":"17",
@@ -2289,21 +2024,6 @@
       "item_category_id":"2",
       "faction_id":"0"
    },
-   "6006090":{
-      "name":"\"Jackpot\" Cerberus",
-      "item_category_id":"3",
-      "faction_id":"1"
-   },
-   "6006091":{
-      "name":"TX2 \"Jackpot\" Emperor",
-      "item_category_id":"3",
-      "faction_id":"3"
-   },
-   "6006092":{
-      "name":"LA3 \"Jackpot\" Desperado",
-      "item_category_id":"3",
-      "faction_id":"2"
-   },
    "6006146":{
       "name":"NS Campion",
       "item_category_id":"2",
@@ -2364,65 +2084,10 @@
       "item_category_id":"11",
       "faction_id":"0"
    },
-   "6008644":{
-      "name":"NSX \"Ivory\" Naginata",
-      "item_category_id":"6",
-      "faction_id":null
-   },
-   "6008645":{
-      "name":"NSX \"Ivory\" Yumi",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
    "6008651":{
       "name":"Ancient Psykinetic Blade",
       "item_category_id":"2",
       "faction_id":"0"
-   },
-   "6008652":{
-      "name":"NSX \"Ivory\" Daimyo",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "6008654":{
-      "name":"NSX \"Ivory\" Tomoe",
-      "item_category_id":"12",
-      "faction_id":"0"
-   },
-   "6008660":{
-      "name":"NSX \"Ivory\" Tengu",
-      "item_category_id":"5",
-      "faction_id":null
-   },
-   "6008665":{
-      "name":"NSX \"Networked\" Yumi",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "6008666":{
-      "name":"NS-61 \"Networked\" Emissary",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "6008668":{
-      "name":"NSX \"Networked\" Naginata",
-      "item_category_id":"6",
-      "faction_id":null
-   },
-   "6008669":{
-      "name":"NSX \"Networked\" Tomoe",
-      "item_category_id":"12",
-      "faction_id":"0"
-   },
-   "6008670":{
-      "name":"NSX \"Networked\" Daimyo",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "6008671":{
-      "name":"NSX \"Networked\" Tengu",
-      "item_category_id":"5",
-      "faction_id":null
    },
    "6008686":{
       "name":"Grenade Printer",
@@ -2494,31 +2159,6 @@
       "item_category_id":"2",
       "faction_id":"0"
    },
-   "6009604":{
-      "name":"NS-11 \"Endeavor\" Assault Rifle",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "6009623":{
-      "name":"NS-7 \"Endeavor\" PDW",
-      "item_category_id":"5",
-      "faction_id":null
-   },
-   "6009652":{
-      "name":"NS-357 \"Endeavor\" Underboss",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "6009656":{
-      "name":"NS-11 \"Endeavor\" Carbine",
-      "item_category_id":"8",
-      "faction_id":null
-   },
-   "6009672":{
-      "name":"NS-15 \"Endeavor\" Machinegun",
-      "item_category_id":"6",
-      "faction_id":null
-   },
    "6009722":{
       "name":"NS-45P Pilot",
       "item_category_id":"3",
@@ -2537,131 +2177,106 @@
    "6009864":{
       "name":"AR-100",
       "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "6009866":{
-      "name":"NS \"Lucky\" Baron G5",
-      "item_category_id":"4",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009891":{
       "name":"AR-101",
       "item_category_id":"7",
-      "faction_id":"0"
+      "faction_id":"4"
    },
    "6009892":{
       "name":"AR-N203",
       "item_category_id":"7",
-      "faction_id":"0"
+      "faction_id":"4"
    },
    "6009893":{
       "name":"CB-100",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009894":{
       "name":"CB-X75",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009895":{
       "name":"CB-200",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009896":{
       "name":"PMG-100",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009897":{
       "name":"PMG-200",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009898":{
       "name":"PMG-3XB",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009899":{
       "name":"XMG-100",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009900":{
       "name":"XMG-155",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009901":{
       "name":"XMG-200",
       "item_category_id":"7",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009902":{
       "name":"U-100 Lastly",
       "item_category_id":"3",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009903":{
       "name":"U-150 Recall",
       "item_category_id":"3",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009904":{
       "name":"U-200 Harbinger",
       "item_category_id":"3",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009905":{
       "name":"LAV-AG",
       "item_category_id":"13",
-      "faction_id":"0"
+      "faction_id":"4"
    },
    "6009906":{
       "name":"LAV-LG",
       "item_category_id":"13",
-      "faction_id":"0"
+      "faction_id":"4"
    },
    "6009907":{
       "name":"LAV-LA",
       "item_category_id":"13",
-      "faction_id":"0"
+      "faction_id":"4"
    },
    "6009908":{
       "name":"HSG-400",
       "item_category_id":"4",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009909":{
       "name":"SG-A25",
       "item_category_id":"4",
-      "faction_id":null
+      "faction_id":"4"
    },
    "6009910":{
       "name":"SG-100",
       "item_category_id":"4",
-      "faction_id":null
-   },
-   "6009971":{
-      "name":"SOAS-20 \"Hazmat\"",
-      "item_category_id":"12",
-      "faction_id":"3"
-   },
-   "6009972":{
-      "name":"Artemis \"Hazmat\" VX26",
-      "item_category_id":"12",
-      "faction_id":"1"
-   },
-   "6009973":{
-      "name":"AF-18 \"Hazmat\" Stalker",
-      "item_category_id":"12",
-      "faction_id":"2"
-   },
-   "6009974":{
-      "name":"NSX \"Hazmat\" Tomoe",
-      "item_category_id":"12",
-      "faction_id":"0"
+      "faction_id":"4"
    }
 }
