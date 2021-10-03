@@ -13,8 +13,8 @@ CONFIG = {
     "grenade": None,
     "knife": None,
     "tactical_slot": None,
-    "app_font": "Helvetica 9"
-    }
+    "app_font": "Helvetica 9",
+}
 
 FACTION_ID = {"vs": "1", "tr": "3", "nc": "2", "nso": None}
 CLASS_TO_LOADOUT_ID = {
@@ -63,10 +63,14 @@ LOADOUT_ALLOWED_WEAPONS = {
 WEAPONS = {}
 IMPLANTS = []
 GRENADES = []
+SUITS = []
+UTILITIES = []
+TACTICALS = []
 
 DRAWN_LOADOUT = {}
 
 last_played_class = None
+
 
 def load_config():
     with open("config.json") as f:
@@ -85,6 +89,22 @@ def load_config():
     global GRENADES
     with open("grenades.json") as f:
         GRENADES = json.load(f)
+
+    global SUITS
+    with open("suits.json") as f:
+        SUITS = json.load(f)
+
+    global UTILITIES
+    with open("utilities.json") as f:
+        UTILITIES = json.load(f)
+
+    global ABILITIES
+    with open("abilities.json") as f:
+        ABILITIES = json.load(f)
+
+    global TACTICALS
+    with open("tacticals.json") as f:
+        TACTICALS = json.load(f)
 
     faction = CONFIG["faction"]
     if faction not in ["nc", "tr", "vs", "nso"]:
@@ -163,9 +183,11 @@ def draw_rocket_launcher(faction):
     drawn_rocket_launcher = random.choice(possible_weapons)
     return drawn_rocket_launcher
 
+
 def draw_rocklet_type():
     possibilities = ["ACE Rocklet", "Sabot Rocklet", "Typhoon Rocklet"]
     return {"name": random.choice(possibilities)}
+
 
 def draw_implant(class_):
     drawn_implant = random.choice(IMPLANTS)
@@ -176,91 +198,71 @@ def draw_implant(class_):
         drawn_implant = random.choice(IMPLANTS)
     return drawn_implant
 
+
 def draw_grenade(class_):
     if class_.lower() == "max":
-        return {"name": None}
+        return None
     drawn = random.choice(GRENADES)
-    while (
-        drawn["class_restriction"] is not None
-        and (class_.lower() not in drawn["class_restriction"]
-        or drawn["faction"] not in ["0", CONFIG["faction"]])
+    while drawn["class_restriction"] is not None and (
+        class_.lower() not in drawn["class_restriction"]
+        or drawn["faction"] not in ["0", FACTION_ID[CONFIG["faction"]]]
     ):
         drawn = random.choice(GRENADES)
     return drawn
 
+
 def draw_knife(class_):
     if class_.lower() == "max":
         return "Max Fist"
-    return random.choice(["standard knife", "OHK knife", "AntiVehicle knife"])
+    return random.choice(["Standard knife", "OHK knife", "AntiVehicle knife"])
+
 
 def draw_suit_slot(class_):
     if class_.lower() == "max":
-        return random.choice(["Kinetic Armor", "Ordnance Armor"])
-    possibilities = [
-        "Advanced Shield Capacitor",
-        "Ammunition Belt",
-        "Flak Armor",
-        "Grenade Bandolier",
-        "Nanoweave Armor",
-    ]
-    if class_.lower() == "infiltrator":
-        possibilities = possibilities + ["Chameleon Module", "Adrenaline Pump"]
-    elif class_.lower() == "light_assault":
-        possibilities = possibilities + ["Munitions Pouch", "Flight Suit", "Adrenaline Pump"]
-    elif class_.lower() == "heavy_assault":
-        possibilities = possibilities + ["Munitions Pouch"]
-    elif class_.lower() == "combat_medic":
-        possibilities = possibilities + ["Nano-Regen Capacitor", "Adrenaline Pump"]
-    elif class_.lower() == "engineer":
-        possibilities = possibilities + ["Demolitions Pouch", "Mine Carrier", "Utility Pouch"]
-    return random.choice(possibilities)
+        drawn = random.choice(SUITS)
+        while (
+            drawn["class_restriction"] is None
+            or class_.lower() not in drawn["class_restriction"]
+        ):
+            drawn = random.choice(SUITS)
+        return drawn
+
+    drawn = random.choice(SUITS)
+    while (
+        drawn["class_restriction"] is not None
+        and class_.lower() not in drawn["class_restriction"]
+    ):
+        drawn = random.choice(SUITS)
+    return drawn
+
 
 def draw_utlity_slot(class_):
     if class_.lower() == "max":
         return None
-    possibilities = [
-        "Auxiliary Shield",
-        "Medical Kit",
-        "Restoration Kit",
-    ]
-    if class_.lower() == "infiltrator":
-        possibilities = possibilities + ["Proximity Mine"]
-    elif class_.lower() == "light_assault":
-        possibilities = possibilities + ["C-4"]
-    elif class_.lower() == "heavy_assault":
-        possibilities = possibilities + ["C-4"]
-    elif class_.lower() == "combat_medic":
-        possibilities = possibilities + ["C-4"]
-    elif class_.lower() == "engineer":
-        possibilities = possibilities + ["Proximity Mine", "C-4", "Tank Mine", "Reserve Hardlight Barrier"]
-    return random.choice(possibilities)
+
+    drawn = random.choice(UTILITIES)
+    while (
+        drawn["class_restriction"] is not None
+        and class_.lower() not in drawn["class_restriction"]
+    ):
+        drawn = random.choice(UTILITIES)
+    return drawn
+
 
 def draw_tactical_slot(class_):
     if class_.lower() == "max":
         return None
-    possibilities = [
-        "Caltrop",
-        "Cortium Bomb",
-        "Flash XS-1",
-        "Hardlight Canopy",
-        "Ordnance Dampener",
-    ]
-    return random.choice(possibilities)
+    return random.choice(TACTICALS)
+
 
 def draw_ability(class_):
-    if class_.lower() == "infiltrator":
-        possibilities = ["Hunter Cloaking", "Nano-Armor Cloaking", "Stalker Cloaking"]
-    elif class_.lower() == "light_assault":
-        possibilities = ["Ambusher Jump Jets", "Icarus Jump Jets", "Skirmisher Jump Jets"]
-    elif class_.lower() == "heavy_assault":
-        possibilities = ["Adrenaline Shield", "Nanite Mesh Generator", "Resist Shield"]
-    elif class_.lower() == "combat_medic":
-        possibilities = ["Nano-Regen Device", "Shield Recharging Field"]
-    elif class_.lower() == "engineer":
-        possibilities = ["Anti-Infantry MANA Turret", "Anti-Vehicle MANA Turret"]
-    elif class_.lower() == "max":
-        possibilities = ["Emergency Repair"]
-    return random.choice(possibilities)
+    drawn = random.choice(ABILITIES)
+    while drawn["class_restriction"] is not None and (
+        class_.lower() not in drawn["class_restriction"]
+        or drawn["faction"] not in ["0", FACTION_ID[CONFIG["faction"]]]
+    ):
+        drawn = random.choice(ABILITIES)
+    return drawn
 
 
 def draw_loadout():
@@ -269,7 +271,7 @@ def draw_loadout():
     while drawn_class == last_played_class:
         drawn_class = random.choice(list(CLASS_TO_LOADOUT_ID.keys()))
     last_played_class = drawn_class
-    
+
     drawn_class_id = CLASS_TO_LOADOUT_ID[drawn_class]
 
     drawn_primary_weapon = draw_primary(drawn_class_id, CONFIG["faction"])
@@ -310,7 +312,7 @@ def draw_loadout():
         "suit_slot": drawn_suit_slot,
         "utility_slot": drawn_utility_slot,
         "tactical_slot": drawn_tactical_slot,
-        "ability": drawn_ability
+        "ability": drawn_ability,
     }
 
     global DRAWN_LOADOUT
@@ -324,7 +326,7 @@ def main():
 
     window = tk.Tk()
     window.minsize(300, 0)
-    window.maxsize(300, 0)
+    window.maxsize(500, 0)
     window.title("Loadout Randomizer")
     if os.path.isfile("EDIM_logo.ico"):
         window.iconbitmap("EDIM_logo.ico")
@@ -339,20 +341,44 @@ def main():
     Frame_2.pack(side=tk.BOTTOM)
 
     font = CONFIG["app_font"]
-    class_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Class : ")
-    primary_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="1st Weapon : ")
-    secondary_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="2nd Weapon : ")
-    tertiary_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="3rd Weapon : ")
-    ability_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Ability : ")
-    implant_1_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Implant 1 : ")
-    implant_2_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Implant 2 : ")
-    grenade_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Grenade : ")
-    knife_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Knife : ")
-    suit_slot_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Suit : ")
-    utility_slot_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Utility : ")
-    tactical_slot_indic = tk.Label(Frame_0, font=font+" bold", justify=tk.LEFT, text="Tactical : ")
+    class_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Class : "
+    )
+    primary_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="1st Weapon : "
+    )
+    secondary_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="2nd Weapon : "
+    )
+    tertiary_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="3rd Weapon : "
+    )
+    ability_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Ability : "
+    )
+    implant_1_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Implant 1 : "
+    )
+    implant_2_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Implant 2 : "
+    )
+    grenade_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Grenade : "
+    )
+    knife_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Knife : "
+    )
+    suit_slot_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Suit : "
+    )
+    utility_slot_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Utility : "
+    )
+    tactical_slot_indic = tk.Label(
+        Frame_0, font=font + " bold", justify=tk.LEFT, text="Tactical : "
+    )
 
-    class_label = tk.Label(Frame_1, font=font+" bold", justify=tk.RIGHT)
+    class_label = tk.Label(Frame_1, font=font + " bold", justify=tk.RIGHT)
     primary_label = tk.Label(Frame_1, font=font, justify=tk.RIGHT)
     secondary_label = tk.Label(Frame_1, font=font, justify=tk.RIGHT)
     tertiary_label = tk.Label(Frame_1, font=font, justify=tk.RIGHT)
@@ -370,24 +396,38 @@ def main():
         class_label["text"] = f'{DRAWN_LOADOUT["class"].capitalize().replace("_", " ")}'
         primary_label["text"] = f'{DRAWN_LOADOUT["primary"]["name"]}'
         secondary_label["text"] = f'{DRAWN_LOADOUT["secondary"]["name"]}'
-        tertiary_label["text"] = f' ' if DRAWN_LOADOUT["tertiary"] is None else DRAWN_LOADOUT["tertiary"]["name"]
-        ability_label["text"] = f'{DRAWN_LOADOUT["ability"]}'
+        tertiary_label["text"] = (
+            f" "
+            if DRAWN_LOADOUT["tertiary"] is None
+            else DRAWN_LOADOUT["tertiary"]["name"]
+        )
+        ability_label["text"] = f'{DRAWN_LOADOUT["ability"]["name"]}'
         implant_1_label["text"] = f'{DRAWN_LOADOUT["implant_1"]["name"]}'
         implant_2_label["text"] = f'{DRAWN_LOADOUT["implant_2"]["name"]}'
-        grenade_label["text"] = f'{DRAWN_LOADOUT["grenade"]["name"]}'
-        knife_label["text"] = f'{DRAWN_LOADOUT["knife"]}'
-        suit_slot_label["text"] = f'{DRAWN_LOADOUT["suit_slot"]}'
-        utility_slot_label["text"] = f'{DRAWN_LOADOUT["utility_slot"]}'
-        tactical_slot_label["text"] = f'{DRAWN_LOADOUT["tactical_slot"]}'
-
+        grenade_label["text"] = (
+            ""
+            if DRAWN_LOADOUT["grenade"] is None
+            else f'{DRAWN_LOADOUT["grenade"]["name"]}'
+        )
+        knife_label["text"] = (
+            " " if DRAWN_LOADOUT["knife"] is None else f'{DRAWN_LOADOUT["knife"]}'
+        )
+        suit_slot_label["text"] = f'{DRAWN_LOADOUT["suit_slot"]["name"]}'
+        utility_slot_label["text"] = (
+            " "
+            if DRAWN_LOADOUT["utility_slot"] is None
+            else f'{DRAWN_LOADOUT["utility_slot"]["name"]}'
+        )
+        tactical_slot_label["text"] = (
+            ""
+            if DRAWN_LOADOUT["tactical_slot"] is None
+            else f'{DRAWN_LOADOUT["tactical_slot"]}'
+        )
 
     if os.path.isfile("button_img.png"):
         button_img = tk.PhotoImage(file="button_img.png").subsample(2, 2)
         draw_button = tk.Button(
-            Frame_2,
-            command=display_draw,
-            image=button_img,
-            borderwidth=0
+            Frame_2, command=display_draw, image=button_img, borderwidth=0
         )
     else:
         draw_button = tk.Button(
@@ -395,7 +435,7 @@ def main():
             height=2,
             width=15,
             text="Draw loadout",
-            font=font+" bold",
+            font=font + " bold",
             background="gray",
             command=display_draw,
         )
@@ -437,6 +477,7 @@ def main():
     display_draw()
 
     window.mainloop()
+
 
 if __name__ == "__main__":
     main()

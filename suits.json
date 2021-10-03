@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Advanced Shield Capacitor",
+    "class_restriction": null
+  },
+  {
+    "name": "Ammunition Belt",
+    "class_restriction": null
+  },
+  {
+    "name": "Flak Armor",
+    "class_restriction": null
+  },
+  {
+    "name": "Grenade Bandolier",
+    "class_restriction": null
+  },
+  {
+    "name": "Nanoweave Armor",
+    "class_restriction": null
+  },
+  {
+    "name": "Kinetic Armor",
+    "class_restriction": ["max"]
+  },
+  {
+    "name": "Ordnance Armor",
+    "class_restriction": ["max"]
+  },
+  {
+    "name": "Chameleon Module",
+    "class_restriction": ["infiltrator"]
+  },
+  {
+    "name": "Adrenaline Pump",
+    "class_restriction": ["infiltrator", "light_assault", "combat_medic"]
+  },
+  {
+    "name": "Munitions Pouch",
+    "class_restriction": ["heavy_assault", "light_assault"]
+  },
+  {
+    "name": "Flight Suit",
+    "class_restriction": ["light_assault"]
+  },
+  {
+    "name": "Nano-Regen Capacitor",
+    "class_restriction": ["combat_medic"]
+  },
+  {
+    "name": "Demolitions Pouch",
+    "class_restriction": ["engineer"]
+  },
+  {
+    "name": "Mine Carrier",
+    "class_restriction": ["engineer"]
+  }
+]

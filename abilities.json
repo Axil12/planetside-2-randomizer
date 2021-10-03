@@ -1,0 +1,87 @@
+[
+  {
+    "name":"Hunter Cloaking",
+    "class_restriction":["infiltrator"],
+    "faction": "0"
+  },
+  {
+    "name":"Nano-Armor Cloaking",
+    "class_restriction":["infiltrator"],
+    "faction": "0"
+  },
+  {
+    "name":"Stalker Cloaking",
+    "class_restriction":["infiltrator"],
+    "faction": "0"
+  },
+  {
+    "name":"Ambusher Jump Jets",
+    "class_restriction":["light_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Icarus Jump Jets",
+    "class_restriction":["light_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Skirmisher Jump Jets",
+    "class_restriction":["light_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Adrenaline Shield",
+    "class_restriction":["heavy_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Nanite Mesh Generator",
+    "class_restriction":["heavy_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Resist Shield",
+    "class_restriction":["heavy_assault"],
+    "faction": "0"
+  },
+  {
+    "name":"Nano-Regen Device",
+    "class_restriction":["combat_medic"],
+    "faction": "0"
+  },
+  {
+    "name":"Shield Recharging Field",
+    "class_restriction":["combat_medic"],
+    "faction": "0"
+  },
+  {
+    "name":"Anti-Infantry MANA Turret",
+    "class_restriction":["engineer"],
+    "faction": "0"
+  },
+  {
+    "name":"Anti-Vehicle MANA Turret",
+    "class_restriction":["engineer"],
+    "faction": "0"
+  },
+  {
+    "name":"Emergency Repair",
+    "class_restriction":["max"],
+    "faction": "0"
+  },
+  {
+    "name":"Aegis Shield",
+    "class_restriction":["max"],
+    "faction": "2"
+  },
+  {
+    "name":"Lockdown",
+    "class_restriction":["max"],
+    "faction": "3"
+  },
+  {
+    "name":"Zealot Overdrive",
+    "class_restriction":["max"],
+    "faction": "1"
+  }
+]

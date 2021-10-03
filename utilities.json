@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Auxiliary Shield",
+    "class_restriction": null
+  },
+  {
+    "name": "Medical Kit",
+    "class_restriction": null
+  },
+  {
+    "name": "Restoration Kit",
+    "class_restriction": null
+  },
+  {
+    "name": "Proximity Mine",
+    "class_restriction": ["infiltrator", "engineer"]
+  },
+  {
+    "name": "C-4",
+    "class_restriction": ["light_assault", "heavy_assault",  "combat_medic", "engineer"]
+  },
+  {
+    "name": "Tank Mine",
+    "class_restriction": ["engineer"]
+  },
+  {
+    "name": "Reserve Hardlight Barrier",
+    "class_restriction": ["engineer"]
+  }
+]
