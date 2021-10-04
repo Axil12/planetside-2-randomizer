@@ -219,16 +219,6 @@
       "item_category_id":"17",
       "faction_id":"0"
    },
-   "1097":{
-      "name":"NS Baron G5B",
-      "item_category_id":"4",
-      "faction_id":null
-   },
-   "1849":{
-      "name":"NS Baron G5G",
-      "item_category_id":"4",
-      "faction_id":null
-   },
    "1869":{
       "name":"19A Fortuna",
       "item_category_id":"8",
@@ -1299,34 +1289,9 @@
       "item_category_id":"4",
       "faction_id":null
    },
-   "75170":{
-      "name":"NS-44G Commissioner",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "75171":{
-      "name":"NS-357G Underboss",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "75172":{
-      "name":"NS-44B Commissioner",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "75173":{
-      "name":"NS-357B Underboss",
-      "item_category_id":"3",
-      "faction_id":null
-   },
    "75234":{
       "name":"NS-11CP",
       "item_category_id":"8",
-      "faction_id":null
-   },
-   "75268":{
-      "name":"NS-357P Underboss",
-      "item_category_id":"3",
       "faction_id":null
    },
    "75490":{
@@ -1409,21 +1374,6 @@
       "item_category_id":"8",
       "faction_id":null
    },
-   "802101":{
-      "name":"NS-11AG",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "802102":{
-      "name":"NS-11CG",
-      "item_category_id":"8",
-      "faction_id":null
-   },
-   "802104":{
-      "name":"NS-15MG",
-      "item_category_id":"6",
-      "faction_id":null
-   },
    "802105":{
       "name":"NS-15MB",
       "item_category_id":"6",
@@ -1434,18 +1384,8 @@
       "item_category_id":"6",
       "faction_id":null
    },
-   "802299":{
-      "name":"NS Decimator-G",
-      "item_category_id":"13",
-      "faction_id":"0"
-   },
    "802300":{
       "name":"NS Decimator-B",
-      "item_category_id":"13",
-      "faction_id":"0"
-   },
-   "802301":{
-      "name":"NS Annihilator-G",
       "item_category_id":"13",
       "faction_id":"0"
    },
@@ -1479,25 +1419,10 @@
       "item_category_id":"3",
       "faction_id":null
    },
-   "802738":{
-      "name":"SVA-GG",
-      "item_category_id":"6",
-      "faction_id":"1"
-   },
    "802771":{
       "name":"NS-AM7 Archer",
       "item_category_id":"11",
       "faction_id":"0"
-   },
-   "802781":{
-      "name":"NS-44LB Blackhand",
-      "item_category_id":"3",
-      "faction_id":null
-   },
-   "802782":{
-      "name":"NS-44LG Blackhand",
-      "item_category_id":"3",
-      "faction_id":null
    },
    "802902":{
       "name":"NS Harrower",
@@ -1512,16 +1437,6 @@
    "802904":{
       "name":"NS Victory",
       "item_category_id":"2",
-      "faction_id":"0"
-   },
-   "802910":{
-      "name":"NS-AM7B Archer",
-      "item_category_id":"11",
-      "faction_id":"0"
-   },
-   "802921":{
-      "name":"NS-AM7G Archer",
-      "item_category_id":"11",
       "faction_id":"0"
    },
    "802969":{
@@ -1599,11 +1514,6 @@
       "item_category_id":"3",
       "faction_id":null
    },
-   "804428":{
-      "name":"NS-61G Emissary",
-      "item_category_id":"3",
-      "faction_id":null
-   },
    "804652":{
       "name":"NS-20 Gorgon",
       "item_category_id":"9",
@@ -1633,126 +1543,6 @@
       "name":"NS-20 Gorgon",
       "item_category_id":"21",
       "faction_id":"2"
-   },
-   "804717":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"9",
-      "faction_id":"3"
-   },
-   "804718":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"21",
-      "faction_id":"3"
-   },
-   "804719":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"9",
-      "faction_id":"1"
-   },
-   "804720":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"21",
-      "faction_id":"1"
-   },
-   "804721":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"9",
-      "faction_id":"2"
-   },
-   "804722":{
-      "name":"NS-20B Gorgon",
-      "item_category_id":"21",
-      "faction_id":"2"
-   },
-   "804723":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"9",
-      "faction_id":"3"
-   },
-   "804724":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"21",
-      "faction_id":"3"
-   },
-   "804725":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"9",
-      "faction_id":"1"
-   },
-   "804726":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"21",
-      "faction_id":"1"
-   },
-   "804727":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"9",
-      "faction_id":"2"
-   },
-   "804728":{
-      "name":"NS-20G Gorgon",
-      "item_category_id":"21",
-      "faction_id":"2"
-   },
-   "804741":{
-      "name":"NS-10B Burster",
-      "item_category_id":"20",
-      "faction_id":"3"
-   },
-   "804742":{
-      "name":"NS-10B Burster",
-      "item_category_id":"23",
-      "faction_id":"3"
-   },
-   "804743":{
-      "name":"NS-10B Burster",
-      "item_category_id":"20",
-      "faction_id":"2"
-   },
-   "804744":{
-      "name":"NS-10B Burster",
-      "item_category_id":"23",
-      "faction_id":"2"
-   },
-   "804745":{
-      "name":"NS-10B Burster",
-      "item_category_id":"20",
-      "faction_id":"1"
-   },
-   "804746":{
-      "name":"NS-10B Burster",
-      "item_category_id":"23",
-      "faction_id":"1"
-   },
-   "804747":{
-      "name":"NS-10G Burster",
-      "item_category_id":"20",
-      "faction_id":"3"
-   },
-   "804748":{
-      "name":"NS-10G Burster",
-      "item_category_id":"23",
-      "faction_id":"3"
-   },
-   "804749":{
-      "name":"NS-10G Burster",
-      "item_category_id":"20",
-      "faction_id":"2"
-   },
-   "804750":{
-      "name":"NS-10G Burster",
-      "item_category_id":"23",
-      "faction_id":"2"
-   },
-   "804751":{
-      "name":"NS-10G Burster",
-      "item_category_id":"20",
-      "faction_id":"1"
-   },
-   "804752":{
-      "name":"NS-10G Burster",
-      "item_category_id":"23",
-      "faction_id":"1"
    },
    "804795":{
       "name":"NSX Amaterasu",
@@ -2158,11 +1948,6 @@
       "name":"NS Firebug",
       "item_category_id":"2",
       "faction_id":"0"
-   },
-   "6009722":{
-      "name":"NS-45P Pilot",
-      "item_category_id":"3",
-      "faction_id":null
    },
    "6009782":{
       "name":"C-4 Present",

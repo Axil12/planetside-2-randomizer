@@ -1,12 +1,12 @@
 {
   "faction": "vs",
-  "include_max": false,
+  "include_max": true,
   "implants": true,
   "suit_slot": true,
   "utility_slot": true,
   "ability": true,
   "grenade": true,
-  "knife": false,
-  "tactical_slot": false,
+  "knife": true,
+  "tactical_slot": true,
   "app_font": "Calibri 11"
 }
