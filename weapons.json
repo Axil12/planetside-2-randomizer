@@ -139,11 +139,6 @@
       "item_category_id":"2",
       "faction_id":"1"
    },
-   "316":{
-      "name":"NS-15MP",
-      "item_category_id":"6",
-      "faction_id":null
-   },
    "429":{
       "name":"Claymore",
       "item_category_id":"18",
@@ -338,11 +333,6 @@
       "name":"Revenant",
       "item_category_id":"19",
       "faction_id":"1"
-   },
-   "2001":{
-      "name":"NS-44P Commissioner",
-      "item_category_id":"3",
-      "faction_id":null
    },
    "2308":{
       "name":"Hunter QCX",
@@ -726,16 +716,6 @@
    },
    "7494":{
       "name":"NS-7 PDW",
-      "item_category_id":"5",
-      "faction_id":null
-   },
-   "7495":{
-      "name":"NS-7B PDW",
-      "item_category_id":"5",
-      "faction_id":null
-   },
-   "7496":{
-      "name":"NS-7G PDW",
       "item_category_id":"5",
       "faction_id":null
    },
@@ -1254,11 +1234,6 @@
       "item_category_id":"24",
       "faction_id":null
    },
-   "69999":{
-      "name":"NS-11P",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
    "70998":{
       "name":"NS-11A",
       "item_category_id":"7",
@@ -1267,11 +1242,6 @@
    "75005":{
       "name":"NS-11C",
       "item_category_id":"8",
-      "faction_id":null
-   },
-   "75034":{
-      "name":"NS-15M1",
-      "item_category_id":"6",
       "faction_id":null
    },
    "75063":{
@@ -1287,11 +1257,6 @@
    "75083":{
       "name":"NS Baron G5",
       "item_category_id":"4",
-      "faction_id":null
-   },
-   "75234":{
-      "name":"NS-11CP",
-      "item_category_id":"8",
       "faction_id":null
    },
    "75490":{
@@ -1363,21 +1328,6 @@
       "name":"Auraxium Slasher",
       "item_category_id":"2",
       "faction_id":"0"
-   },
-   "802099":{
-      "name":"NS-11AB",
-      "item_category_id":"7",
-      "faction_id":"0"
-   },
-   "802100":{
-      "name":"NS-11CB",
-      "item_category_id":"8",
-      "faction_id":null
-   },
-   "802105":{
-      "name":"NS-15MB",
-      "item_category_id":"6",
-      "faction_id":null
    },
    "802106":{
       "name":"NS-15M2",
@@ -1458,11 +1408,6 @@
       "name":"VS Triumph Flare Gun",
       "item_category_id":"3",
       "faction_id":"1"
-   },
-   "803699":{
-      "name":"NS-15 Gallows",
-      "item_category_id":"6",
-      "faction_id":null
    },
    "804113":{
       "name":"NS-TMC-01 \"His Regards\"",
@@ -1549,11 +1494,6 @@
       "item_category_id":"2",
       "faction_id":"0"
    },
-   "804960":{
-      "name":"NS-44LP Blackhand",
-      "item_category_id":"3",
-      "faction_id":null
-   },
    "6002453":{
       "name":"Quick-Det Flash Grenade",
       "item_category_id":"17",
@@ -1578,11 +1518,6 @@
       "name":"Nano-Repair Grenade",
       "item_category_id":"17",
       "faction_id":"0"
-   },
-   "6003752":{
-      "name":"NSX-P Tanto",
-      "item_category_id":"8",
-      "faction_id":null
    },
    "6003793":{
       "name":"NS-44L Showdown",
@@ -1618,26 +1553,6 @@
       "name":"MG-H1 Watchman",
       "item_category_id":"6",
       "faction_id":"3"
-   },
-   "6004144":{
-      "name":"Lasher X2-P",
-      "item_category_id":"14",
-      "faction_id":"1"
-   },
-   "6004168":{
-      "name":"T7-P Mini-Chaingun",
-      "item_category_id":"14",
-      "faction_id":"3"
-   },
-   "6004174":{
-      "name":"NC05-P Jackhammer",
-      "item_category_id":"14",
-      "faction_id":"2"
-   },
-   "6004197":{
-      "name":"NSX-P Naginata",
-      "item_category_id":"6",
-      "faction_id":null
    },
    "6004198":{
       "name":"Mystery Weapon",
@@ -1838,11 +1753,6 @@
       "name":"VE-A Lacerta",
       "item_category_id":"7",
       "faction_id":"1"
-   },
-   "6006239":{
-      "name":"NSX-P Tengu",
-      "item_category_id":"5",
-      "faction_id":null
    },
    "6006299":{
       "name":"LA1 Service Anchor",
