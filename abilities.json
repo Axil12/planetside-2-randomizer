@@ -83,5 +83,15 @@
     "name":"Zealot Overdrive",
     "class_restriction":["max"],
     "faction": "1"
+  },
+  {
+    "name":"Time Bomb",
+    "class_restriction":["max"],
+    "faction": "4"
+  },
+  {
+    "name":"Seraph Shield",
+    "class_restriction":["max"],
+    "faction": "4"
   }
 ]

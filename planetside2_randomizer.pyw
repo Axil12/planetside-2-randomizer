@@ -17,7 +17,7 @@ class LoadoutRandomizer:
     ENGINEER_WEAPONS = INTERCLASS_WEAPONS + [4, 8, 19]
     HEAVYASSAULT_WEAPONS = INTERCLASS_WEAPONS + [4, 6, 13, 14, 19]
     MEDIC_WEAPONS = INTERCLASS_WEAPONS + [4, 7, 19]
-    MAX_WEAPONS = [9, 10, 16, 20, 21, 22, 23]
+    MAX_WEAPONS = [9, 10, 14, 16, 20, 21, 22, 23]
     LOADOUT_ALLOWED_WEAPONS = {
         "1": INFILTRATOR_WEAPONS,
         "8": INFILTRATOR_WEAPONS,
@@ -278,6 +278,12 @@ class LoadoutRandomizer:
             drawn_secondary_weapon = self.draw_primary(drawn_class, self.config["faction"])
         else:
             drawn_secondary_weapon = self.draw_secondary(drawn_class, self.config["faction"])
+
+        if drawn_class == "max": # necessary since thumper is the same item category as grenade printer
+            while "thumper" in drawn_primary_weapon["name"].lower():
+                drawn_primary_weapon = self.draw_primary(drawn_class, self.config["faction"])
+            while "thumper" in drawn_secondary_weapon["name"].lower():
+                drawn_secondary_weapon = self.draw_primary(drawn_class, self.config["faction"])
 
         drawn_tertiary_weapon = None
         if drawn_class == "heavy_assault":
