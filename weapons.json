@@ -1554,11 +1554,6 @@
       "item_category_id":"6",
       "faction_id":"3"
    },
-   "6004198":{
-      "name":"Mystery Weapon",
-      "item_category_id":"12",
-      "faction_id":"0"
-   },
    "6004209":{
       "name":"MGR-M1 Bishop",
       "item_category_id":"19",
@@ -1973,5 +1968,10 @@
       "name":"SG-100",
       "item_category_id":"4",
       "faction_id":"4"
+   },
+   "6011432":{
+      "name":"Seeker HLX",
+      "item_category_id":"219",
+      "faction_id":null
    }
 }
