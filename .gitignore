@@ -1,4 +1,7 @@
+__pycache__
 Pipfile
 *.lock
 *.spec
 env
+build
+dist
