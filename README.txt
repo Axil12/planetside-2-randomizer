@@ -1,5 +1,7 @@
 planetside2_randomizer is a small application that allows you to randomly draw gear for your loadout.
-weapons.json, implants.json nd grendes.json are used to store the available weapons from which you can draw.
+The .json files are used to store the available gear from which you can draw. You can add/delete entries to these files
+to customize your gear pool.
+
 Just launch planetside2_randomizer.exe. The rest should be pretty obvious.
 
 IMPORTANT
